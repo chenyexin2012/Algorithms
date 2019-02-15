@@ -2,8 +2,10 @@ package com.holmes.sorts;
 
 /**
  * 快速排序
- *
+ * <p>
  * 在平均状况下，排序n个项目要Ο(n log n)次比较。在最坏状况下则需要Ο(n^2)次比较，但这种状况并不常见。
+ * <p>
+ * 不稳定排序
  */
 public class QuickSort extends AbstractSort {
 
