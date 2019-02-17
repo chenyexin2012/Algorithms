@@ -3,9 +3,14 @@ package com.holmes.tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BinaryTree<T> extends AbstractBinaryTree<T> {
+/**
+ * 二叉树
+ *
+ * @param <T>
+ */
+public class BinaryTree<T extends Comparable> implements IBinaryTree<T> {
 
-    private BinaryTreeNode<T> root;
+    protected BinaryTreeNode<T> root;
 
     public BinaryTreeNode<T> getRoot() {
         return this.root;

@@ -3,7 +3,7 @@ package com.holmes.tree;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Tree<T> extends AbstractTree<T> {
+public class Tree<T> implements ITree<T> {
 
     /**
      * 树的根节点

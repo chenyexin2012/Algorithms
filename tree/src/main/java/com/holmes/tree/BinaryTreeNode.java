@@ -1,6 +1,11 @@
 package com.holmes.tree;
 
-public class BinaryTreeNode<T> {
+/**
+ * 二叉树节点
+ *
+ * @param <T>
+ */
+public class BinaryTreeNode<T extends Comparable> {
 
     public T data;
     public BinaryTreeNode<T> left, right;
@@ -17,5 +22,10 @@ public class BinaryTreeNode<T> {
 
     public BinaryTreeNode() {
         this(null, null, null);
+    }
+
+    @Override
+    public String toString() {
+        return this.data.toString();
     }
 }

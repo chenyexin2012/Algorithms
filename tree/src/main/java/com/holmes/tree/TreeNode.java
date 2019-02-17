@@ -19,4 +19,9 @@ public class TreeNode<T> {
     public TreeNode() {
         this(null);
     }
+
+    @Override
+    public String toString() {
+        return this.data.toString();
+    }
 }
