@@ -19,6 +19,7 @@
     <modules>
         <module>sorts</module>
         <module>tree</module>
+        <module>leecode</module>
     </modules>
 
     <dependencies>
