@@ -67,4 +67,26 @@ public class BinarySortTree<T extends Comparable> extends BinaryTree<T> implemen
         }
         return search(node.right, value);
     }
+
+    /**
+     * 返回节点个数
+     *
+     * @return
+     */
+    public int count(BinaryTreeNode<T> node) {
+        if (node == null) return 0;
+        return count(node.left) + count(node.right) + 1;
+    }
+
+    /**
+     * 返回树的高度
+     *
+     * @return
+     */
+    public int height(BinaryTreeNode<T> node) {
+        if (node == null) return 0;
+        int heightOfLeft = height(node.left);
+        int heightOfRight = height(node.right);
+        return heightOfLeft > heightOfRight ? heightOfLeft + 1 : heightOfRight + 1;
+    }
 }

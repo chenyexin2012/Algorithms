@@ -13,14 +13,19 @@ public class AvlTree<T extends Comparable> {
 
     public static void main(String[] args) {
 
-        Random random = new Random();
         AvlTree<Integer> avlTree = new AvlTree<>();
-        for (int i = 0; i < 10; i++) {
-            Integer num = random.nextInt(1000);
-            avlTree.insert(num);
+        BinarySortTree<Integer> binarySortTree = new BinarySortTree<>();
+        // 插入有序数列
+        for (int i = 0; i < 10000; i++) {
+            avlTree.insert(i);
+            binarySortTree.insert(i);
         }
 
-        avlTree.inOrderTraverse();
+        System.out.println("count of alv tree nodes: " + avlTree.count(avlTree.getHead()));
+        System.out.println("height of alv tree nodes: " + avlTree.height(avlTree.getHead()));
+
+        System.out.println("count of normal tree nodes: " + binarySortTree.count(binarySortTree.getRoot()));
+        System.out.println("height of normal tree nodes: " + binarySortTree.height(binarySortTree.getRoot()));
     }
 
     /**
